@@ -2,8 +2,6 @@ package by.teachmeskills.page;
 
 
 import by.teachmeskills.testng.PropertiesLoader;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -19,8 +17,6 @@ public class LoginPage extends BasePage {
     private static final By DONATE_BUTTON = By.xpath("//a[@ng-show='donationButtonVisible']");
 
     public static final String MANDATORY_FIELD = "Mandatory field";
-
-    private Logger log = LogManager.getLogger(LoginPage.class);
 
     public LoginPage(WebDriver driver) {
         super(driver);
