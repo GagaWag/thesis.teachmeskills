@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Smoke Tests">
+    <listeners>
+        <listener class-name="by.teachmeskills.testng.AnnotationTransformer"/>
+        <listener class-name="by.teachmeskills.testng.TestListener"/>
+    </listeners>
+    <test name="Tests for Chrome">
+        <groups>
+            <run>
+                <include name="smokeTest"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="by.teachmeskills"/>
+        </packages>
+        <classes>
+            <parameter name="browser" value="chrome"/>
+        </classes>
+    </test>
+    <test name="Tests for FireFox">
+        <groups>
+            <run>
+                <include name="smokeTest"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="by.teachmeskills"/>
+        </packages>
+        <classes>
+            <parameter name="browser" value="firefox"/>
+        </classes>
+    </test>
+    <test name="Tests for Edge">
+        <groups>
+            <run>
+                <include name="smokeTest"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="by.teachmeskills"/>
+        </packages>
+        <classes>
+            <parameter name="browser" value="edge"/>
+        </classes>
+    </test>
+</suite>
